@@ -1,0 +1,736 @@
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mzansi e-hailing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.FontAwesomeConfig = {
+        autoReplaceSvg: "nest",
+      };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              mzansi: {
+                gold: "#F59E0B",
+                dark: "#111827",
+                gray: "#F3F4F6",
+                text: "#374151",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-grapesjs-styles="true">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800 antialiased font-sans">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 h-20 flex items-center"
+    >
+      <div
+        class="container mx-auto px-6 lg:px-12 flex justify-between items-center h-full"
+      >
+        <div class="flex items-center gap-2">
+          <!-- Logo representation based on images -->
+          <div class="flex items-center gap-2">
+            <div
+              class="w-10 h-10 bg-black rounded-lg flex items-center justify-center relative overflow-hidden"
+            >
+              <div
+                class="absolute -top-1 -right-1 w-4 h-4 bg-mzansi-gold rounded-full"
+              ></div>
+              <i class="fa-solid fa-location-dot text-mzansi-gold text-xl"></i>
+            </div>
+            <div class="flex flex-col leading-none">
+              <span class="text-xl font-bold text-black tracking-tight"
+                >Mzansi</span
+              ><span
+                class="text-xs font-semibold text-mzansi-gold tracking-wider uppercase"
+                >E-Hailing</span
+              >
+            </div>
+          </div>
+        </div>
+        <nav class="hidden md:flex gap-8 items-center">
+          <a
+            href="#about"
+            class="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+            >About</a
+          ><a
+            href="#passengers"
+            class="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+            >Passengers</a
+          ><a
+            href="#drivers"
+            class="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+            >Drivers</a
+          ><a
+            href="#contact"
+            class="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <div class="hidden md:block">
+          <a
+            href="#contact"
+            class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden h-[800px]"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/941cb335d4-c763af0246e172ededb3.png"
+          alt="South African cityscape cape town skyline with modern highway and cars during golden hour"
+          class="w-full h-full object-cover opacity-20"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent"
+        ></div>
+      </div>
+      <div
+        class="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mzansi-gold/10 text-mzansi-gold text-xs font-bold uppercase tracking-wider mb-6"
+          >
+            <span class="w-2 h-2 rounded-full bg-mzansi-gold"></span>
+            Proudly South African
+          </div>
+          <h1
+            class="text-5xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-8"
+          >
+            Moving Mzansi <br /><span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-mzansi-gold to-yellow-600"
+              >Safely &amp; Reliably</span
+            >
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mb-10">
+            Connecting communities through trusted transport. Experience a
+            ride-hailing service built on the values of safety, reliability, and
+            local excellence.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#about"
+              class="px-8 py-4 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-transform transform hover:-translate-y-1 shadow-lg shadow-gray-200 text-center"
+            >
+              Learn More
+            </a>
+            <a
+              href="#drivers"
+              class="px-8 py-4 bg-white text-black border border-gray-200 font-semibold rounded-lg hover:bg-gray-50 transition-transform transform hover:-translate-y-1 text-center"
+            >
+              Driver Requirements
+            </a>
+          </div>
+        </div>
+        <div class="hidden lg:block w-96 h-96 relative flex-shrink-0">
+          <div
+            class="absolute inset-0 bg-mzansi-gold/5 rounded-full blur-3xl"
+          ></div>
+          <div
+            class="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/15e923d6e4-f96764fedfb514c76d34.png"
+              alt="south african flag waving proudly colorful vibrant clean isolated without background"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Compliance Statement Section -->
+    <section id="about" class="py-24 bg-white">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="lg:w-1/2 relative">
+            <div
+              class="absolute -top-4 -left-4 w-24 h-24 bg-mzansi-gold/20 rounded-full blur-2xl"
+            ></div>
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]"
+            >
+              <img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1f4b041ca-31f8b07d9a984364b72c.png"
+                alt="professional african man in suit looking at city view through office window confident business leader"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 w-48 h-48 bg-gray-100 rounded-full -z-10"
+            ></div>
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Committed to Compliance &amp; Safety
+            </h2>
+            <div class="w-16 h-1 bg-mzansi-gold mb-8"></div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Mzansi E-Hailing operates with full adherence to national
+              transportation regulations. We are dedicated to providing a
+              legitimate, safe, and transparent service for all South Africans.
+              Our operations are fully licensed, and we maintain rigorous
+              standards to ensure the well-being of both our passengers and
+              driver-partners.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              We believe in fair practices, ethical business conduct, and
+              contributing positively to the local economy. Every trip with
+              Mzansi E-Hailing is a testament to our promise of quality and
+              compliance.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fa-solid fa-shield-halved text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Fully Licensed</h4>
+                  <p class="text-sm text-gray-500">
+                    Operating under valid permits.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fa-solid fa-file-contract text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Regulated</h4>
+                  <p class="text-sm text-gray-500">
+                    Compliant with transport laws.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Passenger Info Section -->
+    <section id="passengers" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span
+            class="text-mzansi-gold font-bold text-sm tracking-wider uppercase"
+            >For Our Riders</span
+          >
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-4">
+            Your Journey, Your Way
+          </h2>
+          <p class="text-gray-600">
+            Whether you're commuting to work, heading to the airport, or
+            exploring the city, we ensure a seamless experience.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-mzansi-gold/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-clock text-mzansi-gold text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Reliable Pickups
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Our advanced dispatch system ensures drivers are near you when you
+              need them. Minimize wait times and get moving faster.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-mzansi-gold/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-route text-mzansi-gold text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Transparent Pricing
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Know your fare before you ride. No hidden fees or surprise
+              surcharges. We believe in honest pricing for every kilometer.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-14 h-14 bg-mzansi-gold/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-user-shield text-mzansi-gold text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Vetted Drivers</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Every driver undergoes a strict background check and vehicle
+              inspection. Your safety is our non-negotiable priority.
+            </p>
+          </div>
+        </div>
+        <div class="mt-16 rounded-3xl overflow-hidden h-[400px] relative">
+          <img
+            src="https://storage.googleapis.com/uxpilot-auth.appspot.com/318b99c247-3dd2d6f06b19a256a9fe.png"
+            alt="happy african woman passenger sitting in back seat of modern car looking out window smiling urban background"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-10"
+          >
+            <div class="text-white max-w-xl">
+              <h3 class="text-2xl font-bold mb-2">Ride with Confidence</h3>
+              <p class="opacity-90">
+                Experience the difference of a locally-focused service that
+                understands your needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Driver Requirements Section -->
+    <section id="drivers" class="py-24 bg-white">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col lg:flex-row-reverse gap-16 items-start">
+          <div class="lg:w-5/12">
+            <div class="sticky top-32">
+              <div
+                class="bg-black text-white p-10 rounded-3xl shadow-xl overflow-hidden relative"
+              >
+                <div
+                  class="absolute top-0 right-0 w-32 h-32 bg-mzansi-gold/20 rounded-full blur-3xl -mr-10 -mt-10"
+                ></div>
+                <h3 class="text-2xl font-bold mb-6">Ready to Drive?</h3>
+                <p class="text-gray-300 mb-8">
+                  Join our growing network of professional drivers. We offer
+                  competitive rates and flexible schedules.
+                </p>
+                <div class="space-y-4">
+                  <div
+                    class="flex items-center gap-4 bg-white/10 p-4 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full bg-mzansi-gold flex items-center justify-center text-black font-bold"
+                    >
+                      1
+                    </div>
+                    <p class="font-medium">Review Requirements</p>
+                  </div>
+                  <div
+                    class="flex items-center gap-4 bg-white/10 p-4 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-bold"
+                    >
+                      2
+                    </div>
+                    <p class="font-medium">Prepare Documents</p>
+                  </div>
+                  <div
+                    class="flex items-center gap-4 bg-white/10 p-4 rounded-xl"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-bold"
+                    >
+                      3
+                    </div>
+                    <p class="font-medium">Visit Our Office</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-7/12">
+            <span
+              class="text-mzansi-gold font-bold text-sm tracking-wider uppercase"
+              >Partnership</span
+            >
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-8">
+              Driver Requirements
+            </h2>
+            <p class="text-gray-600 mb-10 text-lg">
+              To maintain our high standards of service and safety, all
+              prospective drivers must meet the following criteria and provide
+              valid documentation.
+            </p>
+            <div class="space-y-8">
+              <!-- Requirement Group 1 -->
+              <div class="border-l-4 border-mzansi-gold pl-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  Personal Documentation
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-check text-green-500 text-sm"></i>
+                    Valid South African ID or Work Permit
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-check text-green-500 text-sm"></i>
+                    Valid Professional Driving Permit (PrDP)
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-check text-green-500 text-sm"></i>
+                    Proof of Residence (not older than 3 months)
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-check text-green-500 text-sm"></i>
+                    Clean Criminal Record Check
+                  </li>
+                </ul>
+              </div>
+              <!-- Requirement Group 2 -->
+              <div class="border-l-4 border-gray-200 pl-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  Vehicle Requirements
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-car text-gray-400 text-sm"></i>
+                    Vehicle Model 2014 or newer
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-car text-gray-400 text-sm"></i>
+                    Valid Vehicle License Disc
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-car text-gray-400 text-sm"></i>
+                    Roadworthy Certificate
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-car text-gray-400 text-sm"></i>
+                    Comprehensive Commercial Insurance
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-car text-gray-400 text-sm"></i>
+                    Operating License / Double Disc
+                  </li>
+                </ul>
+              </div>
+              <!-- Requirement Group 3 -->
+              <div class="border-l-4 border-gray-200 pl-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">
+                  Device Requirements
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i
+                      class="fa-solid fa-mobile-screen text-gray-400 text-sm"
+                    ></i>
+                    Smartphone (Android 8.0+ or iOS 13+)
+                  </li>
+                  <li class="flex items-center gap-3 text-gray-700">
+                    <i class="fa-solid fa-wifi text-gray-400 text-sm"></i>
+                    Active Data Plan
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Visual Divider -->
+    <div class="h-64 overflow-hidden relative">
+      <img
+        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2c3abe6ce1-72d4321501c9adf4845d.png"
+        alt="long straight asphalt road in south african landscape mountains in background sunny day travel concept"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2">
+            <span
+              class="text-mzansi-gold font-bold text-sm tracking-wider uppercase"
+              >Get In Touch</span
+            >
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-6">
+              Contact Us
+            </h2>
+            <p class="text-gray-600 mb-10 max-w-md">
+              Have questions about our service? Need assistance with onboarding?
+              Our support team is here to help you.
+            </p>
+            <div class="space-y-8">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-mzansi-gold text-xl border border-gray-100"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Email Us</h4>
+                  <a
+                    href="mailto:info@mzansiehailing.co.za"
+                    class="text-gray-600 hover:text-mzansi-gold transition-colors"
+                    >info@mzansiehailing.co.za</a
+                  ><br /><a
+                    href="mailto:support@mzansiehailing.co.za"
+                    class="text-gray-600 hover:text-mzansi-gold transition-colors"
+                    >support@mzansiehailing.co.za</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-mzansi-gold text-xl border border-gray-100"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Call Us</h4>
+                  <p class="text-gray-600">087 123 4567</p>
+                  <p class="text-sm text-gray-400 mt-1">Mon - Fri, 8am - 5pm</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center text-mzansi-gold text-xl border border-gray-100"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-1">Head Office</h4>
+                  <p class="text-gray-600 max-w-xs">
+                    123 Main Road, CBD<br />
+                    Johannesburg, 2001<br />
+                    South Africa
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <div
+              class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 h-full flex flex-col justify-center"
+            >
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                Office Hours
+              </h3>
+              <div class="space-y-4 mb-8">
+                <div
+                  class="flex justify-between items-center border-b border-gray-100 pb-3"
+                >
+                  <span class="text-gray-600">Monday - Friday</span
+                  ><span class="font-semibold text-gray-900"
+                    >08:00 - 17:00</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between items-center border-b border-gray-100 pb-3"
+                >
+                  <span class="text-gray-600">Saturday</span
+                  ><span class="font-semibold text-gray-900"
+                    >09:00 - 13:00</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between items-center border-b border-gray-100 pb-3"
+                >
+                  <span class="text-gray-600">Sunday &amp; Public Holidays</span
+                  ><span class="font-semibold text-gray-400">Closed</span>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                <h4 class="font-bold text-gray-900 mb-2">Emergency Contact</h4>
+                <p class="text-sm text-gray-500 mb-3">
+                  For critical incidents only, available 24/7.
+                </p>
+                <div
+                  class="flex items-center gap-2 text-red-600 font-bold text-lg"
+                >
+                  <i class="fa-solid fa-phone-volume"></i>
+                  0800 911 911
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer" class="bg-black text-white pt-16 pb-8">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+              <div
+                class="w-8 h-8 bg-white/10 rounded-md flex items-center justify-center relative overflow-hidden"
+              >
+                <i
+                  class="fa-solid fa-location-dot text-mzansi-gold text-sm"
+                ></i>
+              </div>
+              <div class="flex flex-col leading-none">
+                <span class="text-lg font-bold text-white tracking-tight"
+                  >Mzansi</span
+                ><span
+                  class="text-[10px] font-semibold text-mzansi-gold tracking-wider uppercase"
+                  >E-Hailing</span
+                >
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Connecting South Africa with safe, reliable, and affordable
+              transportation solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-white">Quick Links</h4>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-mzansi-gold transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#passengers"
+                  class="hover:text-mzansi-gold transition-colors"
+                  >Passengers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#drivers"
+                  class="hover:text-mzansi-gold transition-colors"
+                  >Drivers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-mzansi-gold transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-white">Legal</h4>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li>
+                <a href="#" class="hover:text-mzansi-gold transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-mzansi-gold transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-mzansi-gold transition-colors"
+                  >Driver Agreement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-mzansi-gold transition-colors"
+                  >Compliance</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-white">Social</h4>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-mzansi-gold hover:text-black transition-all"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-mzansi-gold hover:text-black transition-all"
+                ><i class="fa-brands fa-twitter"></i></a
+              ><a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-mzansi-gold hover:text-black transition-all"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500"
+        >
+          <p>© 2026 Mzansi E-Hailing. All rights reserved.</p>
+          <div class="flex gap-6"><span>Proudly South African</span></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
