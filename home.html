@@ -1,3 +1,5 @@
+<!doctype html>
+
 <html lang="en">
   <head>
     <link
@@ -7,11 +9,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mzansi e-hailing</title>
-    <script>
-      window.FontAwesomeConfig = {
-        autoReplaceSvg: "nest",
-      };
-    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
       crossorigin="anonymous"
@@ -22,51 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/output.css" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-            colors: {
-              mzansi: {
-                gold: "#F59E0B",
-                dark: "#111827",
-                gray: "#F3F4F6",
-                text: "#374151",
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      ::-webkit-scrollbar {
-        display: none;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-    <style data-grapesjs-styles="true">
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-      }
-
-      ::-webkit-scrollbar {
-        display: none;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="shortcut icon" href="img/mzansi_logo.png" />
   </head>
 
   <body class="bg-white text-gray-800 antialiased font-sans">
@@ -100,6 +54,11 @@
           </div>
         </div>
         <nav class="hidden md:flex gap-8 items-center">
+          <a
+            href="#hero"
+            class="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+            >Home</a
+          >
           <a
             href="#about"
             class="text-sm font-medium text-gray-600 hover:text-black transition-colors"
@@ -135,7 +94,7 @@
     >
       <div class="absolute inset-0 z-0">
         <img
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/941cb335d4-c763af0246e172ededb3.png"
+          src="img/sa-flag.jpg"
           alt="South African cityscape cape town skyline with modern highway and cars during golden hour"
           class="w-full h-full object-cover opacity-20"
         />
@@ -181,20 +140,21 @@
             </a>
           </div>
         </div>
-        <div class="hidden lg:block w-96 h-96 relative flex-shrink-0">
-          <div
-            class="absolute inset-0 bg-mzansi-gold/5 rounded-full blur-3xl"
-          ></div>
-          <div
-            class="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              class="w-full h-full object-cover"
-              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/15e923d6e4-f96764fedfb514c76d34.png"
-              alt="south african flag waving proudly colorful vibrant clean isolated without background"
-            />
-          </div>
-        </div>
+        <!--BUG: DOESN'NT LOOK VERY NICE-->
+        <!-- <div class="hidden lg:block w-96 h-96 relative flex-shrink-0"> -->
+        <!--   <div -->
+        <!--     class="absolute inset-0 bg-mzansi-gold/5 rounded-full blur-3xl" -->
+        <!--   ></div> -->
+        <!--   <div -->
+        <!--     class="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300" -->
+        <!--   > -->
+        <!--     <img -->
+        <!--       class="w-full h-full object-cover" -->
+        <!--       src="https://storage.googleapis.com/uxpilot-auth.appspot.com/15e923d6e4-f96764fedfb514c76d34.png" -->
+        <!--       alt="south african flag waving proudly colorful vibrant clean isolated without background" -->
+        <!--     /> -->
+        <!--   </div> -->
+        <!-- </div> -->
       </div>
     </section>
     <!-- Compliance Statement Section -->
