@@ -1,25 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["/*"],
+  content: ["./home.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-  config: {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ["Inter", "sans-serif"],
-        },
-        colors: {
-          mzansi: {
-            gold: "#F59E0B",
-            dark: "#111827",
-            gray: "#F3F4F6",
-            text: "#374151",
-          },
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+      colors: {
+        mzansi: {
+          gold: "#F59E0B",
+          dark: "#111827",
+          gray: "#F3F4F6",
+          text: "#374151",
         },
       },
     },
   },
+  plugins: [],
 };
