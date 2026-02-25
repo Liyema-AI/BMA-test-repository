@@ -686,7 +686,14 @@
         <div
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500"
         >
-          <p>© 2026 Mzansi E-Hailing. All rights reserved.</p>
+          <p>
+            ©
+            <script>
+              new Date().getFullYear() > 2010 &&
+                document.write(new Date().getFullYear());
+            </script>
+            Mzansi E-Hailing. All rights reserved.
+          </p>
           <div class="flex gap-6"><span>Proudly South African</span></div>
         </div>
       </div>
